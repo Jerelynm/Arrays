@@ -1,10 +1,18 @@
+//REGISTRO DE NOTAS PARA ESTUDIANTES
+/*
+ PROGRAMA CREADO POR:
+ RASHELL RAMIREZ
+ JERELYN MARIN
+ */
 #include <iostream>
 
 using namespace std;
 
+//CONSTANTE, LOS DATOS SOLICITADOS TIENEN UN LIMITE
 const int MAX_ESTUDIANTES = 10;
 const int MAX_NOTAS = 5;
 
+//INGRESO DE DATOS, GUARDAR DATOS EN ARRAYS
 void ingresarNotas(double notas[][MAX_NOTAS], int numEstudiantes) {
  for (int i = 0; i < numEstudiantes; i++) {
   cout << "Ingrese las notas del estudiante " << i + 1 << ":" << endl;
@@ -14,6 +22,7 @@ void ingresarNotas(double notas[][MAX_NOTAS], int numEstudiantes) {
   }
  }
 }
+//MODIFICACION/CONVERSION DE DATOS, recorrer arreglos
 void calcularPromedios(double notas[][MAX_NOTAS], double promedios[], int numEstudiantes) {
  for (int i = 0; i < numEstudiantes; i++) {
   double suma = 0;
@@ -23,6 +32,7 @@ void calcularPromedios(double notas[][MAX_NOTAS], double promedios[], int numEst
   promedios[i] = suma / MAX_NOTAS;
  }
 }
+//acceder a posiciones específicas de un arreglo
 void mostrarResultados(double notas[][MAX_NOTAS], double promedios[], int numEstudiantes) {
  for (int i = 0; i < numEstudiantes; i++) {
   cout << "Estudiante " << i + 1 << ":" << endl;
@@ -33,6 +43,7 @@ void mostrarResultados(double notas[][MAX_NOTAS], double promedios[], int numEst
   cout << endl;
  }
 }
+//MUESTRA TODOS LOS RESULTADOS
 int main() {
  int numEstudiantes;
  cout << "Ingrese el número de estudiantes (máximo " << MAX_ESTUDIANTES << "): ";
