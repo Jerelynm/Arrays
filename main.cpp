@@ -14,3 +14,12 @@ void ingresarNotas(double notas[][MAX_NOTAS], int numEstudiantes) {
   }
  }
 }
+void calcularPromedios(double notas[][MAX_NOTAS], double promedios[], int numEstudiantes) {
+ for (int i = 0; i < numEstudiantes; i++) {
+  double suma = 0;
+  for (int j = 0; j < MAX_NOTAS; j++) {
+   suma += notas[i][j];
+  }
+  promedios[i] = suma / MAX_NOTAS;
+ }
+}
