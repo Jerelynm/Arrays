@@ -33,3 +33,22 @@ void mostrarResultados(double notas[][MAX_NOTAS], double promedios[], int numEst
   cout << endl;
  }
 }
+int main() {
+ int numEstudiantes;
+ cout << "Ingrese el número de estudiantes (máximo " << MAX_ESTUDIANTES << "): ";
+ cin >> numEstudiantes;
+
+ if (numEstudiantes > MAX_ESTUDIANTES) {
+  cout << "Número de estudiantes excede el máximo permitido." << endl;
+  return 1;
+ }
+
+ double notas[MAX_ESTUDIANTES][MAX_NOTAS];
+ double promedios[MAX_ESTUDIANTES];
+
+ ingresarNotas(notas, numEstudiantes);
+ calcularPromedios(notas, promedios, numEstudiantes);
+ mostrarResultados(notas, promedios, numEstudiantes);
+
+ return 0;
+}
