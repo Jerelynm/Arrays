@@ -1,0 +1,20 @@
+Estudiante 1:
+  Nombre: Rashell
+  Grado: Semestre III
+    Nota 1: 85
+    Nota 2: 95
+    Nota 3: 99
+    Nota 4: 100
+    Nota 5: 78
+  Promedio: 91.4
+
+Estudiante 2:
+  Nombre: Jerelyn
+  Grado: Semestre III
+    Nota 1: 65
+    Nota 2: 98
+    Nota 3: 78
+    Nota 4: 95
+    Nota 5: 99
+  Promedio: 87
+
