@@ -23,3 +23,13 @@ void calcularPromedios(double notas[][MAX_NOTAS], double promedios[], int numEst
   promedios[i] = suma / MAX_NOTAS;
  }
 }
+void mostrarResultados(double notas[][MAX_NOTAS], double promedios[], int numEstudiantes) {
+ for (int i = 0; i < numEstudiantes; i++) {
+  cout << "Estudiante " << i + 1 << ":" << endl;
+  for (int j = 0; j < MAX_NOTAS; j++) {
+   cout << "Nota " << j + 1 << ": " << notas[i][j] << endl;
+  }
+  cout << "Promedio: " << promedios[i] << endl;
+  cout << endl;
+ }
+}
